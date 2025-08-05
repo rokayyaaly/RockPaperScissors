@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>rock paper scissors</title>
+        <style>
+           .r, .p, .s {
+                background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); /* Sets the background color of button elements */
+                color: black; /* Sets the text color of button elements */
+                font-size: 50px; /* Sets the font size for button text */
+                padding: 20px; /* Adds padding inside the button */
+                margin: 10px; /* Adds space between buttons */
+                border-radius: 40%;
+                cursor: pointer;
+                box-shadow: 0 11px #878787;
+            }
+
+            /* Corrected hover state */
+            .r:hover, .p:hover, .s:hover {
+                background-color: #1b3d1c;
+                color: rgb(118, 116, 116); /* Changes text color on hover */
+                box-shadow: 0 11px #6b6b6b; /* Example: Slightly darker shadow on hover */
+            }
+
+            /* Corrected active state */
+            .r:active, .p:active, .s:active {
+                background-color: #3e8e41;
+                box-shadow: 0 6px #666;
+                transform: translateY(6px);
+            }
+
+            body {
+                background: rgb(156, 159, 235);
+                text-align: center; /* Centers the content on the page */
+            }
+
+            p {
+                font-size: 50px; /* Sets the font size for paragraph elements */
+            }
+        </style>
+    </head>
+    <body>
+        <p>Rock Paper Scissors</p>
+
+        <button class="r" onclick="const randomno = Math.random();
+        let compmove = '';
+        if(randomno >= 0 && randomno < 0.333333){
+            compmove = 'Rock';
+        } else if(randomno >= 0.333333 && randomno < 0.666666){
+            compmove = 'Paper';
+        } else if(randomno >= 0.666666 && randomno < 1){
+            compmove = 'Scissors';
+        }
+
+        let result ='';
+        if(compmove === 'Rock'){
+            result = 'Tie';
+        } else if(compmove === 'Paper'){
+            result = 'You lose';
+        } else if(compmove === 'Scissors'){
+            result = 'You win';
+        }
+        alert(`you picked rock. Computer picked ${compmove}. ${result}`);
+
+        ">Rock</button>
+
+
+        <button class="p" onclick="const randomno = Math.random();
+        let compmove = '';
+        if(randomno >= 0 && randomno < 0.333333){
+            compmove = 'Rock';
+        } else if(randomno >= 0.333333 && randomno < 0.666666){
+            compmove = 'Paper';
+        } else if(randomno >= 0.666666 && randomno < 1){
+            compmove = 'Scissors';
+        }
+
+        let result ='';
+        if(compmove === 'Rock'){
+            result = 'You win';
+        } else if(compmove === 'Paper'){
+            result = 'Tie';
+        } else if(compmove === 'Scissors'){
+            result = 'You lose';
+        }
+        alert(`you picked paper. Computer picked ${compmove}. ${result}`);
+        ">Paper</button>
+
+        
+        <button class="s" onclick="const randomno = Math.random();
+        let compmove = '';
+        if(randomno >= 0 && randomno < 0.333333){
+            compmove = 'Rock';
+        } else if(randomno >= 0.333333 && randomno < 0.666666){
+            compmove = 'Paper';
+        } else if(randomno >= 0.666666 && randomno < 1){
+            compmove = 'Scissors';
+        }
+
+        let result ='';
+        if(compmove === 'Rock'){
+            result = 'You lose';
+        } else if(compmove === 'Paper'){
+            result = 'You win';
+        } else if(compmove === 'Scissors'){
+            result = 'Tie';
+        }
+        alert(`you picked Scissors. Computer picked ${compmove}. ${result}`);
+        ">Scissors</button>
+
+        <script>
+
+        </script>
+    </body>
+</html>
